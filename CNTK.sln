@@ -695,6 +695,7 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EvalWrapper", "Source\Extensibility\EvalWrapper\EvalWrapper.vcxproj", "{EF766CAE-9CB1-494C-9153-0030631A6340}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSEvalClient", "Source\Extensibility\CSEvalClient\CSEvalClient.csproj", "{41E11A59-62B2-4927-A4F8-F40B1B612C6C}"
+EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NewImageReader", "Source\Readers\NewImageReader\NewImageReader.vcxproj", "{9BD0A711-0BBD-45B6-B81C-053F03C26CFB}"
 	ProjectSection(ProjectDependencies) = postProject
 		{60BDB847-D0C4-4FD3-A947-0C15C08BCDB5} = {60BDB847-D0C4-4FD3-A947-0C15C08BCDB5}
@@ -705,6 +706,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Reader", "Source\Readers\Re
 	ProjectSection(ProjectDependencies) = postProject
 		{60BDB847-D0C4-4FD3-A947-0C15C08BCDB5} = {60BDB847-D0C4-4FD3-A947-0C15C08BCDB5}
 	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NewHTKMLFReader", "Source\Readers\NewHTKMLFReader\NewHTKMLFReader.vcxproj", "{7B7A51ED-AA8E-4660-A805-D50235A02120}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -810,6 +813,10 @@ Global
 		{F0A9637C-20DA-42F0-83D4-23B4704DE602}.Debug|x64.Build.0 = Debug|x64
 		{F0A9637C-20DA-42F0-83D4-23B4704DE602}.Release|x64.ActiveCfg = Release|x64
 		{F0A9637C-20DA-42F0-83D4-23B4704DE602}.Release|x64.Build.0 = Release|x64
+		{7B7A51ED-AA8E-4660-A805-D50235A02120}.Debug|x64.ActiveCfg = Debug|x64
+		{7B7A51ED-AA8E-4660-A805-D50235A02120}.Debug|x64.Build.0 = Debug|x64
+		{7B7A51ED-AA8E-4660-A805-D50235A02120}.Release|x64.ActiveCfg = Release|x64
+		{7B7A51ED-AA8E-4660-A805-D50235A02120}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -906,5 +913,6 @@ Global
 		{41E11A59-62B2-4927-A4F8-F40B1B612C6C} = {60F87E25-BC87-4782-8E20-1621AAEBB113}
 		{9BD0A711-0BBD-45B6-B81C-053F03C26CFB} = {33EBFE78-A1A8-4961-8938-92A271941F94}
 		{F0A9637C-20DA-42F0-83D4-23B4704DE602} = {33EBFE78-A1A8-4961-8938-92A271941F94}
+		{7B7A51ED-AA8E-4660-A805-D50235A02120} = {33EBFE78-A1A8-4961-8938-92A271941F94}
 	EndGlobalSection
 EndGlobal

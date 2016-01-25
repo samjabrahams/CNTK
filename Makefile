@@ -311,6 +311,32 @@ $(LIBDIR)/HTKMLFReader.so: $(HTKMLFREADER_OBJ) | $(CNTKMATH_LIB)
 	$(CXX) $(LDFLAGS) -shared $(patsubst %,-L%, $(LIBDIR) $(LIBPATH)) $(patsubst %,$(RPATH)%, $(ORIGINDIR) $(LIBPATH)) -o $@ $^ -l$(CNTKMATH)
 
 ########################################
+# NewHTKMLFReader plugin
+########################################
+
+NEWHTKMLFREADER_SRC =\
+	$(SOURCEDIR)/Readers/NewHTKMLFReader/Bundler.cpp \
+	$(SOURCEDIR)/Readers/NewHTKMLFReader/ConfigHelper.cpp \
+	$(SOURCEDIR)/Readers/NewHTKMLFReader/DataReader.cpp \
+	$(SOURCEDIR)/Readers/NewHTKMLFReader/DataWriter.cpp \
+	$(SOURCEDIR)/Readers/NewHTKMLFReader/FrameModePacker.cpp \
+	$(SOURCEDIR)/Readers/NewHTKMLFReader/HTKDataDeserializer.cpp \
+	$(SOURCEDIR)/Readers/NewHTKMLFReader/MLFDataDeserializer.cpp \
+	$(SOURCEDIR)/Readers/NewHTKMLFReader/NewHTKMLFReaderShim.cpp \
+	$(SOURCEDIR)/Readers/NewHTKMLFReader/NewHTKMLFWriter.cpp \
+	$(SOURCEDIR)/Readers/NewHTKMLFReader/Utils.cpp \
+
+NEWHTKMLFREADER_OBJ := $(patsubst %.cpp, $(OBJDIR)/%.o, $(NEWHTKMLFREADER_SRC))
+
+NEWHTKMLFREADER:=$(LIBDIR)/NewHTKMLFReader.so
+ALL+=$(NEWHTKMLFREADER)
+SRC+=$(NEWHTKMLFREADER_SRC)
+
+$(LIBDIR)/NewHTKMLFReader.so: $(NEWHTKMLFREADER_OBJ) | $(CNTKMATH_LIB)
+	@echo $(SEPARATOR)
+	$(CXX) $(LDFLAGS) -shared $(patsubst %,-L%, $(LIBDIR) $(LIBPATH)) $(patsubst %,$(RPATH)%, $(ORIGINDIR) $(LIBPATH)) -o $@ $^ -l$(CNTKMATH)
+
+########################################
 # LMSequenceReader plugin
 ########################################
 

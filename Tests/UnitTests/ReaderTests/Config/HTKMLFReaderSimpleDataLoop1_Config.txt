@@ -8,7 +8,8 @@ precision = "float"
 
 Simple_Test = [
     reader = [
-        readerType = "HTKMLFReader"
+        # TODO don't merge:
+        readerType = "NewHTKMLFReader"
         readMethod = "blockRandomize"
         miniBatchMode = "partial"
         randomize = "auto"
